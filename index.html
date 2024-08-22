@@ -17,12 +17,19 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#landing">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#tools">Tools</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#tools">Tools</a></li>
+            </ul>
+        </div>
     </nav>
 <!--     <section id="landing">
         <h1>Full Stack Web Developer</h1>
@@ -68,7 +75,7 @@
         </div>
     </section>
     <section id="tools">
-        <div class="container-fluid text-center d-flex align-items-center justify-content-center vh-100">
+        <div class="container-fluid text-center d-flex align-items-center justify-content-center">
             <div class="tools-section p-4">
                 <h2 class="mb-4">Tools</h2>
                 <div class="row">
@@ -126,5 +133,19 @@
     <script src="js/scripts.js"></script>
     <!-- Bootstrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('nav').addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+    </script>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navList = document.querySelector('.nav-list');
+    
+        menuIcon.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
 </body>
+
 </html>
